@@ -3,4 +3,4 @@ select
    status,
    amount / 100 as amount,
    created as order_date
-from `dbt-tutorial`.stripe.payment
+from {{source ('stripe','payment')}}
